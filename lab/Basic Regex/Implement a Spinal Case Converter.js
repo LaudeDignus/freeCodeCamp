@@ -1,11 +1,11 @@
 const spinalCase = (str) => {
-  const regex = /(?:\s|_)/g;
-  const otherRegex = /(?<=[a-z]+)([A-Z])/g;
-  if (regex.test(str)) {
-    str = str.replace(regex, "-");
+  const regexSpaceUnderscore = /(?:\s|_)/g;
+  const regexCamelCase = /(?<=[a-z]+)([A-Z])/g;
+  if (regexSpaceUnderscore.test(str)) {
+    str = str.replace(regexSpaceUnderscore, "-");
   }
-  if (otherRegex.test(str)) {
-    str = str.replace(otherRegex, "-$1");
+  if (regexCamelCase.test(str)) {
+    str = str.replace(regexCamelCase, "-$1");
   }
   return str.toLowerCase();
 };
