@@ -1,0 +1,52 @@
+:root {
+  --gray: gray;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 12rem;
+  justify-content: space-around;
+}
+
+#text-input {
+  margin: 10 0;
+  height: 3.397rem;
+}
+
+#check-btn {
+  height: 2.1rem;
+}
+
+#result {
+  display: none;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+#rule {
+  position: absolute;
+  top: 10%;
+}
+
+#word-checked {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
