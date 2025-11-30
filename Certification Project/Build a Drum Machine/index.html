@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Drum Machine</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="drum-machine" id="drum-machine">
+      <section class="drum-machine__pad-bank" aria-label="Drum pads">
+        <button class="drum-machine__pad drum-machine__pad--heater-1" data-sound="heater-1">Q</button>
+        <button class="drum-machine__pad drum-machine__pad--heater-2" data-sound="heater-2">W</button>
+        <button class="drum-machine__pad drum-machine__pad--heater-3" data-sound="heater-3">E</button>
+        <button class="drum-machine__pad drum-machine__pad--heater-4" data-sound="heater-4">A</button>
+        <button class="drum-machine__pad drum-machine__pad--clap" data-sound="clap">S</button>
+        <button class="drum-machine__pad drum-machine__pad--open-hh" data-sound="open-hh">D</button>
+        <button class="drum-machine__pad drum-machine__pad--kick-hat" data-sound="kick-n'-hat">Z</button>
+        <button class="drum-machine__pad drum-machine__pad--kick" data-sound="kick">X</button>
+        <button class="drum-machine__pad drum-machine__pad--closed-hh" data-sound="closed-hh">C</button>
+      </section>
+
+      <section class="drum-machine__display-wrapper">
+        <p class="drum-machine__display" id="display" aria-live="polite"></p>
+      </section>
+    </main>
+  </body>
+</html>

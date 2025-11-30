@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.drum-machine {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e3e6eb;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.drum-machine__pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.drum-machine__pad {
+  background: #fafbfd;
+  border: 1px solid #d7dbe2;
+  padding: 1.2rem 0;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  outline: none;
+  user-select: none;
+  color: #333;
+}
+
+.drum-machine__pad:hover {
+  background: #f0f4ff;
+  border-color: #b4c4ff;
+}
+
+.drum-machine__pad:active {
+  transform: scale(0.95);
+  background: #e1e9ff;
+  border-color: #8ba3ff;
+}
+
+.drum-machine__pad--active {
+  animation: flash 150ms ease-out;
+}
+
+@keyframes flash {
+  0% {
+    background: #dbe5ff;
+    box-shadow: 0 0 10px rgba(100, 140, 255, 0.4);
+  }
+  100% {
+    background: #fafbfd;
+    box-shadow: none;
+  }
+}
+
+.drum-machine__display-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.drum-machine__display {
+  background: #f0f2f6;
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid #d6d9e0;
+  min-width: 170px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a6aff;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 0 12px rgba(120, 150, 255, 0.15);
+}
+
+@media (max-width: 480px) {
+  .drum-machine {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .drum-machine__pad {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .drum-machine__display {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .drum-machine {
+    max-width: 460px;
+    padding: 2rem;
+  }
+
+  .drum-machine__pad {
+    padding: 1.4rem 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .drum-machine:hover {
+    transform: scale(1.02);
+  }
+}
