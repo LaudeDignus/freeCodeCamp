@@ -55,7 +55,11 @@ class ProjectIdeaBoard {
   }
 }
 
-const test = new ProjectIdea("Finish FCC", "Complete the freeCodeCamp curriculum", projectStatus.PENDING);
+const test = new ProjectIdea(
+  "Finish FCC",
+  "Complete the freeCodeCamp curriculum",
+  projectStatus.PENDING
+);
 test.updateProjectStatus(projectStatus.SUCCESS);
 
 const test2 = new ProjectIdeaBoard("My Project Ideas");
